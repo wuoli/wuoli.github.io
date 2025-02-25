@@ -1,57 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Olivia Wu E-Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Website</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-   
-    <div class="circle-wrapper">
-        <div class="circle-container">
-            <video id="main-display" src="person.mp4" autoplay loop muted></video>
+    <header id="navbar">
+        <a href="index.html" class="name">Olivia Wu</a>
+        <nav class="menu">
+          <a href="research/index.html">Research</a>
+          <a href="projects.html">Projects</a>
+          <a href="community.html">Community</a>
+        </nav>
+        <div class="menu-icon">☰</div>
+        <div class="dropdown-menu">
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
         </div>
-        <div class="name-text" id="olivia-text">Olivia</div>
-        <div class="name-text" id="wu-text">Wu</div>
+        <hr class="navbar-divider">
+      </header>               
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bridging Cultures, </h1>
+      <h1>Closing Gaps</h1>
     </div>
+  </section>
 
-
-    <div class="name-text" id="computational-biologist-left">Computational</div>
-    <div class="name-text" id="computational-biologist-right">Biologist</div>
-
-   <a href="about.html" class="gene-container" id="gene-about">
-        <img class="gene" src="gene.png" alt="About">
-        <div class="gene-text">About</div>
-    </a>
-
-    <a href="research.html" class="gene-container" id="gene-research">
-        <img class="gene" src="gene.png" alt="research">
-        <div class="gene-text">research</div>
-        <div class="preview-circle">
-            <img src="research-preview.jpg" alt="research Preview" class="preview-image">
+  <section class="about">
+    <div class="about-container">
+      <!-- Left Section: Image -->
+      <div class="about-image">
+        <img src="Photo.png" alt="Photo of Olivia Wu"> <!-- Replace 'your-photo.jpg' with the actual image path -->
+      </div>
+  
+      <!-- Right Section: Autobiography -->
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+            Hi! I’m Olivia Wu, an undergraduate student at UCLA with a passion for bridging disciplines and cultures. Having attended ten schools across three countries, I developed a deep appreciation for connection—navigating different languages, educational systems, and perspectives.        </p>
+        </p>
+        <p>
+            At Cedars-Sinai and UCLA, I work at the intersection of computer science and biomedicine, focusing on disease prediction using computational models applied to genetic and health data. I am particularly interested in making research more accessible, whether through developing user-friendly software for clinicians or creating educational content on complex medical topics.        </p>
+        </p>
+        <p>
+            Beyond research, I’m dedicated to addressing food insecurity and homelessness. From Vancouver to Los Angeles, I’ve witnessed stark wealth disparities and work to bridge this gap through initiatives like UCLA’s Hunger Project and the GardenBank Conservation Society, where we provide food and care packages to those in need.        </p>
+        </p>
+        <!-- CV Download Button -->
+        <div class="buttons">
+          <a href="CV.pdf" class="cv-button" download>📄 Curriculum Vitae</a> <!-- Replace 'your-cv.pdf' with the actual CV file path -->
         </div>
-    </a>
+      </div>
+    </div>
+  </section>
 
-    <a href="cv.html" class="gene-container" id="gene-cv">
-        <img class="gene" src="gene.png" alt="cv">
-        <div class="gene-text">cv</div>
-        <div class="preview-circle">
-            <img src="cv-preview.jpg" alt="cv Preview" class="preview-image">
+
+  <section class="projects">
+    <h2>My Projects</h2>
+    <div class="card-container">
+      <!-- Card 1 -->
+      <div class="card" onclick="window.location.href='computational-biology.html'">
+        <div class="card-front">
+          <h3>Computational Biology & Medicine</h3>
+          <p>Leveraging algorithms to enhance medical research and inclusivity.</p>
         </div>
-    </a>
-
-    <a href="humanitarian.html" class="gene-container" id="gene-humanitarian">
-        <img class="gene" src="gene.png" alt="humanitarian">
-        <div class="gene-text">humanitarian</div>
-        <div class="preview-circle">
-            <img src="humanitarian-preview.jpg" alt="humanitarian Preview" class="preview-image">
+        <div class="card-back">
+          <img src="computational-biology.jpg" alt="Computational Biology Image"> <!-- Replace with your image -->
         </div>
-    </a>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="card" onclick="window.location.href='bias-mitigation.html'">
+        <div class="card-front">
+          <h3>Bias Mitigation & Inclusion</h3>
+          <p>Developing methods to ensure fairness in biomedical AI.</p>
+        </div>
+        <div class="card-back">
+          <img src="bias-mitigation.jpg" alt="Bias Mitigation Image"> <!-- Replace with your image -->
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="card" onclick="window.location.href='biology-math-art.html'">
+        <div class="card-front">
+          <h3>Biology, Math, and Art</h3>
+          <p>Exploring the intersection of creativity and science.</p>
+        </div>
+        <div class="card-back">
+          <img src="biology-math-art.jpg" alt="Biology, Math, and Art Image"> <!-- Replace with your image -->
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <hr class="section-divider">
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Left: Mini Menu -->
+      <div class="footer-menu">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Right: Contact/Connect Section -->
+      <div class="footer-connect">
+        <h3>Let's Connect!</h3>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/olivia-wu-a34ab11a6/" target="_blank" aria-label="LinkedIn">
+            <img src="icons/linkedin-icon.png" alt="LinkedIn Icon">
+          </a>
+          <a href="https://github.com/wuoli" target="_blank" aria-label="GitHub">
+            <img src="icons/github-icon.png" alt="GitHub Icon">
+          </a>
+          <a href="mailto:oliviawu27@g.ucla.edu" aria-label="Email">
+            <img src="icons/email-icon.png" alt="Email Icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>  
+  
+
+  <script src="scripts.js"></script>
 </body>
-
 </html>

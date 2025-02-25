@@ -1,0 +1,292 @@
+/* Image Carousel Section */
+/* Image Gallery Section */
+.image-gallery {
+  padding: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-gallery h2 {
+  font-size: 2rem;
+  margin-top: 70px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.gallery-container {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-track img {
+  height: 300px; /* Set a fixed height */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 10px;
+  border-radius: 5px;
+  scroll-snap-align: start;
+}
+
+.gallery-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-button.prev {
+  left: 0;
+}
+
+.gallery-button.next {
+  right: 0;
+}
+
+/* Timeline Section */
+.research-timeline {
+  padding: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /*margin-top: 70px; /* Add top margin */
+}
+
+.research-timeline h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 50;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: white; /* Timeline line color */
+  margin-left: -1px;
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-content {
+  background-color: #2c2c54;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin-left: 55%;
+  width: 45%;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 100%;
+  border: solid transparent;
+  border-width: 10px;
+  border-right-color: #1e1e2f;
+  pointer-events: none;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-right: 50%;
+  margin-left: 0;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+  left: 100%;
+  right: auto;
+  border-left-color: #1e1e2f;
+  border-right-color: transparent;
+}
+
+/* Dates */
+.timeline-date {
+  font-style: italic;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+/* HR */
+.timeline-content hr {
+  border-top: 1px solid #666;
+  margin: 10px 0;
+}
+
+/* Expandable Content */
+.expandable-content {
+  display: none;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #4caf50;
+}
+
+.timeline-content:hover .expandable-content {
+  display: block;
+}
+
+/* Research Journey Section */
+.research-journey {
+  padding: 50px;
+  color: white;
+}
+
+.research-section {
+  margin-bottom: 30px;
+}
+
+.research-section h2 {
+  margin-bottom: 15px;
+}
+
+.research-section p {
+  line-height: 1.6;
+}
+
+
+/* FAQ Section */
+.faq {
+  padding: 50px;
+  color: white;
+}
+
+.faq h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.faq-card {
+  width: 400px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.faq-card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.faq-card:hover .faq-card-inner {
+  transform: rotateY(180deg);
+}
+
+.faq-card-front,
+.faq-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.faq-card-front {
+  background-color: #2c2c54;
+  color: white;
+}
+
+.faq-card-back {
+  background-color: #1e1e2f;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;            /* Add display flex */
+  flex-direction: column;   /* Add flex-direction column */
+}
+
+.scrollable-content {
+  width: 100%;
+  height: 100%;          /* Adjust height to take available space */
+  overflow-y: auto;       /* Change from scroll to auto so it only shows if needed */
+  padding: 10px;
+}
+
+/* Scrollbar Styling */
+.scrollable-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ##### Poster Section ##### */
+.poster-section {
+  padding: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.poster-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.pdf-container {
+  max-width: 800px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
