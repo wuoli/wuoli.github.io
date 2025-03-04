@@ -41,3 +41,29 @@ function sendMessage(event) {
     
     window.location.href = `mailto:oliviawu27@g.ucla.edu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
+
+let currentAudio = null; // Store currently playing audio
+
+function playAudio(src) {
+    // If an audio is playing
+    if (currentAudio) {
+        if (!currentAudio.paused && currentAudio.getAttribute("data-src") === src) {
+            // Scenario 1: Stop audio if the same section is clicked
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            currentAudio = null;
+            return;
+        } else {
+            // Scenario 2: Stop current audio and play new section audio
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+        }
+    }
+
+    // Scenario 3: Play audio if no audio is playing
+    currentAudio = new Audio(src);
+    currentAudio.setAttribute("data-src", src); // Store source for comparison
+    currentAudio.play();
+}
+
+

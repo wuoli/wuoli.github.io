@@ -22,6 +22,34 @@ h3{
   color: white;
 }
 
+.voice-button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #165d94;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+.voice-button:hover {
+  background-color: #144a75;
+}
+
+/* Ensure each section has relative positioning for button placement */
+section {
+  position: relative;
+  padding-bottom: 40px; /* Prevents button from overlapping text */
+}
+
 /* Navbar */
 #navbar {
   position: fixed;
