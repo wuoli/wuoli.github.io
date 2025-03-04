@@ -1,0 +1,75 @@
+
+
+#hero h2{
+    color: #fbfbf9;
+}
+
+#garden h3{
+    color: #165d94;
+    margin: 2% 0;
+    font-size: 1.5rem;
+}
+
+.project-section{
+    padding: 50px;
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project-gallery {
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    padding: 10px;
+    overflow-x: auto;
+    align-items: center;
+    background: transparent;
+}
+
+.project-gallery img {
+    width: auto;
+    height: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#hunger-img{
+    text-align: center;
+    margin: 20px;
+}
+
+#hunger-img img{
+    width: 60%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Add space above and below */
+    width: 100%;
+}
+
+.video-container iframe {
+    max-width: 100%; /* Ensures responsiveness */
+}
+
+
+.cta {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cta a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #165d94;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}

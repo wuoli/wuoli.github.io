@@ -3,40 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Website</title>
+  <title>Main | Olivia Wu</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header id="navbar">
-        <a href="index.html" class="name">Olivia Wu</a>
-        <nav class="menu">
-          <a href="research/index.html">Research</a>
-          <a href="projects.html">Projects</a>
-          <a href="community.html">Community</a>
-        </nav>
-        <div class="menu-icon">☰</div>
-        <div class="dropdown-menu">
-          <a href="blog.html">Blog</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <hr class="navbar-divider">
-      </header>               
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Bridging Cultures, </h1>
-      <h1>Closing Gaps</h1>
-    </div>
-  </section>
+  <header id="navbar">
+    <a href="index.html" class="name">Olivia Wu</a>
+    <nav class="menu">
+        <a href="research/index.html">Research</a>
+        <a href="projects/index.html">Projects</a>
+        <a href="community/index.html">Community</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+    <hr class="navbar-divider">
+  </header>             
+
+  <video id="hero-video" autoplay muted playsinline>
+    <source src="hero-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
   <section class="about">
     <div class="about-container">
-      <!-- Left Section: Image -->
-      <div class="about-image">
-        <img src="Photo.png" alt="Photo of Olivia Wu"> <!-- Replace 'your-photo.jpg' with the actual image path -->
-      </div>
-  
-      <!-- Right Section: Autobiography -->
+
       <div class="about-text">
         <h2>About Me</h2>
         <p>
@@ -48,62 +38,123 @@
         <p>
             Beyond research, I’m dedicated to addressing food insecurity and homelessness. From Vancouver to Los Angeles, I’ve witnessed stark wealth disparities and work to bridge this gap through initiatives like UCLA’s Hunger Project and the GardenBank Conservation Society, where we provide food and care packages to those in need.        </p>
         </p>
-        <!-- CV Download Button -->
-        <div class="buttons">
-          <a href="CV.pdf" class="cv-button" download>📄 Curriculum Vitae</a> <!-- Replace 'your-cv.pdf' with the actual CV file path -->
-        </div>
+      </div>
+      <div class="about-image">
+        <img src="Photo.png" alt="Photo of Olivia Wu"> 
       </div>
     </div>
   </section>
+
 
 
   <section class="projects">
     <h2>My Projects</h2>
     <div class="card-container">
-      <!-- Card 1 -->
-      <div class="card" onclick="window.location.href='computational-biology.html'">
-        <div class="card-front">
-          <h3>Computational Biology & Medicine</h3>
-          <p>Leveraging algorithms to enhance medical research and inclusivity.</p>
-        </div>
-        <div class="card-back">
-          <img src="computational-biology.jpg" alt="Computational Biology Image"> <!-- Replace with your image -->
-        </div>
+    <!-- Card 1 -->
+    <a href="research/index.html" class="card-link"> <!-- Wrap the entire card in an <a> -->
+      <div class="card">
+          <div class="card-front">
+              <h3>Computational Biomedicine Research</h3>
+              <p>Leveraging algorithms to enhance medical research and inclusivity.</p>
+          </div>
+          <div class="card-back">
+              <img src="research/research-connection.jpg" alt="Computational Biology Image">
+              <h3 class="click-text">Click for More</h3>
+          </div>
       </div>
+    </a>
   
-      <!-- Card 2 -->
-      <div class="card" onclick="window.location.href='bias-mitigation.html'">
-        <div class="card-front">
-          <h3>Bias Mitigation & Inclusion</h3>
-          <p>Developing methods to ensure fairness in biomedical AI.</p>
-        </div>
-        <div class="card-back">
-          <img src="bias-mitigation.jpg" alt="Bias Mitigation Image"> <!-- Replace with your image -->
-        </div>
+    <!-- Card 2 -->
+    <a href="projects/index.html#biology" class="card-link"> <!-- Wrap the entire card in an <a> -->
+      <div class="card">
+          <div class="card-front">
+              <h3>Educational Videos</h3>
+              <p>Communicate biology and dentistry to the general audience.</p>
+          </div>
+          <div class="card-back">
+              <img src="projects/thumbnail1.png" alt="Educational Video Image">
+              <h3 class="click-text">Click for More</h3>
+          </div>
       </div>
+    </a>
+
+    <!-- Card 3 -->
+    <a href="projects/index.html#math" class="card-link"> <!-- Wrap the entire card in an <a> -->
+      <div class="card">
+          <div class="card-front">
+              <h3>Math and Art</h3>
+              <p>Exploring the intersection of creativity and mathematics.</p>
+          </div>
+          <div class="card-back">
+              <img src="MathThumbnail.png" alt="Mathematics and Art Image">
+              <h3 class="click-text">Click for More</h3>
+          </div>
+      </div>
+    </a>
   
-      <!-- Card 3 -->
-      <div class="card" onclick="window.location.href='biology-math-art.html'">
-        <div class="card-front">
-          <h3>Biology, Math, and Art</h3>
-          <p>Exploring the intersection of creativity and science.</p>
+      <!-- Card 4 -->
+      <a href="community/index.html#garden" class="card-link"> <!-- Wrap the entire card in an <a> -->
+        <div class="card">
+            <div class="card-front">
+                <h3>Climate Change and Food Insecurity</h3>
+                <p>Help tackle food disparity while promoting sustainability.</p>
+            </div>
+            <div class="card-back">
+                <img src="community/images/GardenBank7.JPEG" alt="GardenBank Image">
+                <h3 class="click-text">Click for More</h3>
+            </div>
         </div>
-        <div class="card-back">
-          <img src="biology-math-art.jpg" alt="Biology, Math, and Art Image"> <!-- Replace with your image -->
-        </div>
-      </div>
+      </a>
+  </section>
+
+
+  <section class="cv-section">
+    <h2>Download my CV Here: </h2>
+    <div class="buttons">
+      <a href="CV.pdf" class="cv-button" download>📄 Curriculum Vitae</a> <!-- Replace 'your-cv.pdf' with the actual CV file path -->
     </div>
   </section>
 
-  <hr class="section-divider">
+  <video id="superpower-video" autoplay muted playsinline>
+    <source src="superpower.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+
+<section id="contact">
+  <section id="lets-connect">
+    <h2>Let's Connect!</h2>
+    <p>Feel free to reach out through email or check out my work below.</p>
+    
+    <form id="contact-form" onsubmit="sendMessage(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit">Send Message</button>
+    </form>
+
+    <div class="social-links">
+        <a href="https://github.com/wuoli" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/olivia-wu-a34ab11a6/" target="_blank">LinkedIn</a>
+    </div>
+</section>
+</section>
+
   <footer class="footer">
     <div class="footer-container">
       <!-- Left: Mini Menu -->
       <div class="footer-menu">
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#blog">Blog</a></li>
+          <li><a href="./index.html">Main</a></li>
+          <li><a href="research/index.html">Research</a></li>
+          <li><a href="projects/index.html">Creative Projects</a></li>
+          <li><a href="community/index.html">Community Initiatives</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>

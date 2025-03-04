@@ -1,0 +1,210 @@
+body {
+    background-color: #f0f8ff; /* light blue*/
+    color: #333;
+}
+
+#navbar a{
+    color: white;
+}
+
+h2 {
+    color: #165d94;
+    font-size: 1.9em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+#hero {
+    background-color: #165d94; 
+    color: white;
+    text-align: center;
+    padding: 100px;
+}
+
+#hero h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#project-nav {
+    background-color: #4682b4; /* Steel blue */
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 55px;
+    z-index: 5;
+}
+
+.nav-button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+}
+
+.nav-button:hover, .nav-button.active {
+    background-color: #b0e0e6; /* Powder blue */
+    color: #4682b4; /* Steel blue */
+}
+
+#personal-projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.project-section {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Projects Section */
+#personal-projects {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 2rem;
+}
+
+.project-section {
+    background-color: white;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-section:hover {
+    transform: translateY(-5px);
+}
+
+
+
+#biology{
+    display: flex;
+}
+
+.bio-text {
+    flex: 1; /* Takes up 50% of space */
+    padding-right: 20px;
+}
+
+.bio-video {
+    flex: 1; /* Takes up 50% of space */
+    text-align: right;
+}
+
+.bio-video iframe {
+    width: 100%;
+    max-width: 500px; /* Adjust this for desired size */
+    height: 280px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#dentistry{
+    text-align: center;
+}
+
+#dentistry-reels {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.insta-reel {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 350px; /* Adjust size as needed */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.insta-reel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Play Button Effect */
+.insta-reel::before {
+    content: "▶";
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Make it invisible by default */
+    transition: opacity 0.3s ease;
+}
+
+.insta-reel:hover::before {
+    opacity: 1; /* Show play button on hover */
+}
+
+.insta-reel:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+    transform: scale(1.05); /* Add slight zoom effect on hover */
+}
+ 
+#math {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.desmos-embed {
+    margin: 20px 0;
+}
+
+.video-gallery {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.video-gallery iframe {
+    width: 560px;
+    height: 315px;
+    border: none;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #hero {
+        padding: 80px 20px;
+    }
+    
+    #hero h1 {
+        font-size: 2em;
+    }
+    
+    .nav-button {
+        padding: 10px 18px;
+        font-size: 0.9em;
+    }
+    
+    .project-section {
+        padding: 2rem;
+    }
+} 

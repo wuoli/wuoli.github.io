@@ -28,3 +28,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
+
+function sendMessage(event) {
+    event.preventDefault(); // Prevent form submission
+    
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    
+    const subject = `Message from ${name}`;
+    const body = `${message}`;
+    
+    window.location.href = `mailto:oliviawu27@g.ucla.edu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
